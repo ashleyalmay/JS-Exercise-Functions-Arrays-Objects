@@ -121,9 +121,9 @@ return object;
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(object) {
+function getName(person){
 
-  return 'Hello, my name is'+ object;
+  return 'Hello, my name is '+ person.name;
 }
 
 
@@ -142,9 +142,14 @@ function getName(object) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(food) {
+  for (let i=0;i<food.length; i++){
+   if (food[i] == 'apple'){
+     return i;
+   }
+  }
 }
+
 
 /**
  * ### Challenge `isItAnApple`
@@ -161,7 +166,7 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
+function isItAnApple(food) {
   /* code here */
 }
 
